@@ -7,7 +7,7 @@ const Home = () => {
     <div>
       {/* Navbar */}
       
-<Nav/>
+{/* <Nav/> */}
 
       {/* Hero Section */}
       <header className="hero">

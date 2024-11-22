@@ -10,7 +10,7 @@ import digitalforensics from '../Images/digitalforensics.webp'
 const About = () => {
   return (
     <>
-     <Nav/>
+     {/* <Nav/> */}
     <div className="about-page">
       {/* Hero Section */}
       <header className="about-hero">
