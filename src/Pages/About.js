@@ -1,6 +1,6 @@
 import React from "react";
 import "./About.css";
-import Nav from "./Nav";
+// import Nav from "./Nav";
 import PenetrationTestingImage from '../Images/PenetrationTesting.jpg';
 import defensive from '../Images/defensive.png';
 import EthicalHacking from '../Images/EthicalHacking.jpg'

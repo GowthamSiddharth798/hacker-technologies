@@ -1,7 +1,7 @@
 import React from "react";
 import "./Home.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Nav from'./Nav.js';
+// import Nav from'./Nav.js';
 const Home = () => {
   return (
     <div>
