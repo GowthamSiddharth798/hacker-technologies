@@ -9,7 +9,7 @@ const Navigate = () => {
     <Router>
       <Nav />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home/>} />
         <Route path="/about" element={<About />} />
         <Route path="*" element={<h1>404 - Page Not Found</h1>} />
       </Routes>

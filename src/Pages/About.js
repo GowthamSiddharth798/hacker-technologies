@@ -13,14 +13,14 @@ const About = () => {
      {/* <Nav/> */}
     <div className="about-page">
       {/* Hero Section */}
-      <header className="about-hero">
+      {/* <header className="about-hero">
         <div className="container text-center text-white">
           <h1 className="display-4">Welcome to CyberSec Academy</h1>
           <p className="lead">
             Building Careers in Cybersecurity Through Innovation and Knowledge
           </p>
         </div>
-      </header>
+      </header> */}
 
       {/* Grid Section */}
       <section className="about-content py-5">

@@ -1,52 +1,299 @@
-/* Hero Section Styles */
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  background-color: #2d4059;
+  color: #d1d1d1;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2,  h4, h5 {
+  color: #ffffff;
+}
+h3{
+  color: black;
+}
+p {
+  color: #b0b0b0;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #1b263b;
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #17a2b8;
+}
+
+.navbar-nav .nav-link {
+  color: #d1d1d1 !important;
+  margin-left: 15px;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #17a2b8 !important;
+  text-decoration: underline;
+}
+
+/* Hero Section */
 .hero {
-    background: url('https://source.unsplash.com/1600x900/?cybersecurity') no-repeat center center/cover;
-    height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background: linear-gradient(rgba(27, 38, 59, 0.8), rgba(27, 38, 59, 0.8)),
+    url("https://source.unsplash.com/1920x1080/?cybersecurity") no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.hero h1 {
+  font-size: 6vw; /* Adjust font size based on viewport width */
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero p {
+  font-size: 3vw;
+  margin-top: 1rem;
+  animation: slideIn 2s ease-in-out;
+}
+
+.hero a {
+  margin-top: 2rem;
+  padding: 10px 25px;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #17a2b8;
+  transition: background-color 0.3s ease;
+}
+
+.hero a:hover {
+  background-color: #138496;
+}
+
+/* Features Section */
+.features {
+  background: #1b263b;
+  padding: 3rem 0;
+  color: #d1d1d1;
+}
+
+.feature-icon {
+  font-size: 3rem;
+  color: #17a2b8;
+  margin-bottom: 1rem;
+}
+
+/* Carousel */
+.carousel-item img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
+footer {
+  background: #1b263b;
+  color: #d1d1d1;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #a5a5a5;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  .hero h1 {
-    font-size: 4rem;
-    animation: fadeIn 2s ease;
+  to {
+    opacity: 1;
   }
-  
-  .hero p {
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Default styles for large screens (desktops) */
+.hero {
+  font-size: 2rem;
+}
+
+.hero .display-4 {
+  font-size: 3rem;
+}
+
+.hero .lead {
+  font-size: 1.25rem;
+}
+
+.features h2 {
+  font-size: 2.5rem;
+}
+
+.features .col-md-4 h3 {
+  font-size: 1.5rem;
+}
+
+.carousel-section h2 {
+  font-size: 2.5rem;
+}
+
+.modal-section h5 {
+  font-size: 1.75rem;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 768px) {
+  .hero {
     font-size: 1.5rem;
-    margin: 20px 0;
-    animation: slideIn 2s ease;
   }
-  
-  /* Features Section */
-  .features .feature-icon {
-    font-size: 3rem;
-    color: #007bff;
-    margin-bottom: 15px;
+
+  .hero .display-4 {
+    font-size: 2.5rem;
   }
-  
-  .features h3 {
-    margin-bottom: 10px;
+
+  .hero .lead {
+    font-size: 1rem;
   }
-  
-  /* Animations */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+
+  .features h2 {
+    font-size: 2rem;
   }
-  
-  @keyframes slideIn {
-    from {
-      transform: translateY(20px);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
+
+  .features .col-md-4 h3 {
+    font-size: 1.25rem;
   }
-  
+
+  .carousel-section h2 {
+    font-size: 2rem;
+  }
+
+  .modal-section h5 {
+    font-size: 1.5rem;
+  }
+
+  footer p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 576px) {
+  .hero {
+    font-size: 1.25rem;
+  }
+
+  .hero .display-4 {
+    font-size: 2rem;
+  }
+
+  .hero .lead {
+    font-size: 0.875rem;
+  }
+
+  .features h2 {
+    font-size: 1.75rem;
+  }
+
+  .features .col-md-4 h3 {
+    font-size: 1.1rem;
+  }
+
+  .carousel-section h2 {
+    font-size: 1.75rem;
+  }
+
+  .modal-section h5 {
+    font-size: 1.25rem;
+  }
+
+  footer p {
+    font-size: 0.85rem;
+  }
+}
+
+
+
+
+
+/* Hero Section */
+.hero {
+  position: relative;
+  width: 100%;
+  /* margin-top: 20px; */
+  height: 50vh;
+  background-image: url("https://d3lu3qnchgm3nw.cloudfront.net/AcuCustom/Sitename/DAM/028/iStock-1420039900.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  /* border-top-right-radius: 50%; Apply rounded corner to create the shape */
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vh; /* Make the width and height equal to create a square */
+  height: 100vh;
+  background: inherit;
+  transform: translate(-50%, -50%) rotate(45deg); /* Rotate by 45 degrees to create a rhombus */
+  z-index: -1; /* Ensure the background image stays behind text */
+}
+
+/* Text and Button Styles */
+.hero h1 {
+  font-size: 6vw; /* Adjust font size based on viewport width */
+  color: white;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero p {
+  font-size: 3vw;
+  margin-top: 1rem;
+  color: white;
+  animation: slideIn 2s ease-in-out;
+}
+
+.hero a {
+  margin-top: 2rem;
+  padding: 10px 25px;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #17a2b8;
+  transition: background-color 0.3s ease;
+}
+
+.hero a:hover {
+  background-color: #138496;
+}

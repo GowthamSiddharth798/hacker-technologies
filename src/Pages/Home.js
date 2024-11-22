@@ -1,30 +1,22 @@
 import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./Home.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
-// import Nav from'./Nav.js';
+
 const Home = () => {
   return (
     <div>
-      {/* Navbar */}
-      
-{/* <Nav/> */}
-
-      {/* Hero Section */}
-      <header className="hero">
-        <div className="container text-center text-white">
-          <h1 className="display-4 animate-fade">Welcome to CyberSec Academy</h1>
+           <header className="hero text-white text-center d-flex align-items-center justify-content-center">
+        <div className="container">
+          <h1 className="display-4 animate-fade">Welcome to CyberSecurity Academy</h1>
           <p className="lead animate-slide">
             Build a career in cybersecurity with our cutting-edge courses!
           </p>
-          <a href="/courses" className="btn btn-primary btn-lg">
-            Explore Courses
-          </a>
         </div>
       </header>
 
-      {/* Features Section */}
       <section className="features py-5 bg-light">
         <div className="container">
+          <h2 className="text-center mb-4">Our Core Features</h2>
           <div className="row text-center">
             <div className="col-md-4">
               <i className="fas fa-shield-alt feature-icon"></i>
@@ -44,6 +36,71 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Carousel Section */}
+      <section className="carousel-section py-5 bg-dark text-white">
+        <div className="container">
+          <h2 className="text-center mb-4">Student Success Stories</h2>
+          <div id="successCarousel" className="carousel slide" data-bs-ride="carousel">
+            <div className="carousel-inner">
+              <div className="carousel-item active text-center">
+                <p>"CyberSecurity Academy transformed my career in cybersecurity!"</p>
+                <h5>- John Doe, Ethical Hacker</h5>
+              </div>
+              <div className="carousel-item text-center">
+                <p>"The advanced bug hunting course is a game-changer!"</p>
+                <h5>- Jane Smith, Bug Hunter</h5>
+              </div>
+              <div className="carousel-item text-center">
+                <p>"Highly recommend their SOC and Digital Forensics training!"</p>
+                <h5>- Alex Johnson, Forensics Expert</h5>
+              </div>
+            </div>
+            <button className="carousel-control-prev" type="button" data-bs-target="#successCarousel" data-bs-slide="prev">
+              <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span className="visually-hidden">Previous</span>
+            </button>
+            <button className="carousel-control-next" type="button" data-bs-target="#successCarousel" data-bs-slide="next">
+              <span className="carousel-control-next-icon" aria-hidden="true"></span>
+              <span className="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Modal Section */}
+      <section className="modal-section text-center py-5">
+        <button className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#subscribeModal">
+          Subscribe for Updates
+        </button>
+
+        <div className="modal fade" id="subscribeModal" tabIndex="-1" aria-labelledby="subscribeModalLabel" aria-hidden="true">
+          <div className="modal-dialog">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h5 className="modal-title" id="subscribeModalLabel">Subscribe to Our Newsletter</h5>
+                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div className="modal-body">
+                <p>Stay updated with the latest news and courses in cybersecurity!</p>
+                <input type="email" className="form-control" placeholder="Enter your email" />
+              </div>
+              <div className="modal-footer">
+                <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" className="btn btn-primary">Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-dark text-white text-center py-4">
+        <p>&copy; 2024 CyberSecurity Academy. All Rights Reserved.</p>
+        <p>
+          <a href="/privacy" className="text-white">Privacy Policy</a> | <a href="/terms" className="text-white">Terms of Service</a>
+        </p>
+      </footer>
     </div>
   );
 };

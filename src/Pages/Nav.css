@@ -1,0 +1,58 @@
+/* Default Navbar Heading (for large screens) */
+.navbar-heading {
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  /* Medium screens (tablets) */
+  @media (max-width: 768px) {
+    .navbar-heading {
+      font-size: 1.5rem; /* Adjust the font size for smaller screens */
+      text-align: left;  /* Align left for smaller screens */
+    }
+  }
+  
+  /* Small screens (phones) */
+  @media (max-width: 576px) {
+    .navbar-heading {
+      font-size: 1.25rem; /* Further decrease the font size */
+      text-align: left;  /* Align left for mobile screens */
+    }
+  }
+  
+  /* Logo and Navbar Heading */
+.navbar-heading {
+  display: flex;
+  align-items: center; /* Center align the logo and text vertically */
+  font-size: 1.5rem; /* Adjust font size for the brand name */
+  color: #17a2b8; /* Use a color that matches the theme */
+  gap: 10px; /* Add spacing between the logo and text */
+}
+
+.navbar-heading img {
+  height: 50px; /* Set the height of the logo */
+  width: auto; /* Maintain the aspect ratio of the logo */
+  border-radius: 8px; /* Optional: Add rounded edges for a polished look */
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .navbar-heading img {
+    height: 40px; /* Reduce logo size for tablets */
+  }
+
+  .navbar-heading {
+    font-size: 1.25rem; /* Adjust text size for tablets */
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-heading img {
+    height: 30px; /* Further reduce logo size for mobile devices */
+  }
+
+  .navbar-heading {
+    font-size: 1rem; /* Adjust text size for smaller screens */
+  }
+}
