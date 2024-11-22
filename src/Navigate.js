@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Us
 import Nav from './Pages/Nav'; // Ensure this path matches the location of your Nav.js file
 import Home from './Pages/Home';
 import About from './Pages/About';
-
+import Course from './Pages/Course';
 const Navigate = () => {
   return (
     <Router>
@@ -11,6 +11,7 @@ const Navigate = () => {
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/about" element={<About />} />
+        <Route path="/course" element={<Course />} />
         <Route path="*" element={<h1>404 - Page Not Found</h1>} />
       </Routes>
     </Router>

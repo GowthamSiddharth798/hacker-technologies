@@ -8,12 +8,13 @@ body {
   padding: 0;
 }
 
-h1, h2,  h4, h5 {
+h1,h2,   h4, h5 {
   color: #ffffff;
 }
 h3{
   color: black;
 }
+
 p {
   color: #b0b0b0;
 }
@@ -246,7 +247,7 @@ footer p {
   position: relative;
   width: 100%;
   /* margin-top: 20px; */
-  height: 50vh;
+  height: 56.5vh;
   background-image: url("https://d3lu3qnchgm3nw.cloudfront.net/AcuCustom/Sitename/DAM/028/iStock-1420039900.jpg");
   background-size: cover;
   background-position: center;
@@ -297,3 +298,6 @@ footer p {
 .hero a:hover {
   background-color: #138496;
 }
+
+
+

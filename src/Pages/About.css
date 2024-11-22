@@ -1,47 +1,92 @@
-/* Hero Section */
-.about-hero {
-    background: url('https://source.unsplash.com/1600x900/?cybersecurity,technology') no-repeat center center/cover;
-    height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+/* About Us Section */
+.about-us {
+  animation: fadeIn 1.5s ease-in-out;
+}
+/* Style only h3 with about-heading class */
+.about-us .about-heading {
+  color: #ffffff;
+  font-size: 1.75rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #17a2b8;
+  animation: fadeInDown 1s ease;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #b0b0b0;
+  animation: fadeInDown 1s ease;
+}
+
+.company-info p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #d1d1d1;
+}
+
+.about-image img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-image img:hover {
+  transform: scale(1.1);
+}
+
+/* Staff Section */
+.staff-card {
+  background-color: #1b263b;
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.staff-card:hover {
+  transform: translateY(-5px);
+}
+
+.staff-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #17a2b8;
+}
+
+.staff-title {
+  font-size: 1rem;
+  color: #b0b0b0;
+}
+
+.staff-desc {
+  font-size: 0.9rem;
+  color: #d1d1d1;
+  line-height: 1.4;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  .about-hero h1 {
-    font-size: 3rem;
+  to {
+    opacity: 1;
   }
-  
-  .about-hero p {
-    font-size: 1.5rem;
-    margin-top: 10px;
+}
+
+@keyframes fadeInDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
   }
-  
-  /* Grid Section */
-  .about-content {
-    line-height: 1.8;
-    font-size: 1.1rem;
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
-  
-  .course-box {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .staff-card {
+    margin-bottom: 1.5rem;
   }
-  
-  .course-box:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  }
-  
-  .card {
-    border: none;
-    overflow: hidden;
-  }
-  
-  .card-img-top {
-    transition: transform 0.3s ease;
-  }
-  
-  .card:hover .card-img-top {
-    transform: scale(1.1);
-  }
-  
+}

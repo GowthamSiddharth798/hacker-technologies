@@ -1,0 +1,39 @@
+/* Floating Call Button Container */
+.call-button-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000; /* Ensure it stays on top */
+  }
+  
+  /* Floating Call Button */
+  .call-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background-color: #28a745; /* Green color for call button */
+    color: white;
+    font-size: 24px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+  }
+  
+  /* Hover Effect */
+  .call-button:hover {
+    background-color: #218838;
+    transform: scale(1.1);
+  }
+  
+  /* Small Screens */
+  @media (max-width: 576px) {
+    .call-button {
+      width: 50px;
+      height: 50px;
+      font-size: 20px;
+    }
+  }
+  

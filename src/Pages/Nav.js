@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min'; // Ensure this is included
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 import { Link } from 'react-router-dom';
 import './Nav.css';
 import Logo from '../Images/Logo.jpg'; // Import the logo
@@ -11,14 +11,12 @@ const Nav = () => {
   const toggleNavbar = () => setIsNavOpen(!isNavOpen);
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
       <div className="container">
         {/* Logo and heading */}
-        <Link className="navbar-brand" to="/">
-          <h1 className="navbar-heading">
-            <img src={Logo} alt="Hacker Technologies Logo" />
-            Hacker Technologies
-          </h1>
+        <Link className="navbar-brand d-flex align-items-center" to="/">
+          <img src={Logo} alt="Hacker Technologies Logo" className="logo me-2" />
+          <span className="brand-name">Hacker Plus Technologies</span>
         </Link>
 
         <button
@@ -37,16 +35,16 @@ const Nav = () => {
         <div className={`collapse navbar-collapse ${isNavOpen ? 'show' : ''}`} id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <Link className="nav-link" to="/">Home</Link>
+              <Link className="nav-link hover-underline" to="/">Home</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/about">About Us</Link>
+              <Link className="nav-link hover-underline" to="/about">About Us</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/courses">Courses</Link>
+              <Link className="nav-link hover-underline" to="/course">Courses</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/contact">Contact</Link>
+              <Link className="nav-link hover-underline" to="/contact">Contact</Link>
             </li>
           </ul>
         </div>

@@ -1,6 +1,8 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Home.css";
+import Footer from './Footer';
+import CallButton from "./CallButton";
 
 const Home = () => {
   return (
@@ -16,7 +18,7 @@ const Home = () => {
 
       <section className="features py-5 bg-light">
         <div className="container">
-          <h2 className="text-center mb-4">Our Core Features</h2>
+          <h2 className="text-center mb-5 text-dark">Our Core Features</h2>
           <div className="row text-center">
             <div className="col-md-4">
               <i className="fas fa-shield-alt feature-icon"></i>
@@ -38,7 +40,7 @@ const Home = () => {
       </section>
 
       {/* Carousel Section */}
-      <section className="carousel-section py-5 bg-dark text-white">
+      <section className="carousel-section py-5 bg-dark text-white mb-2">
         <div className="container">
           <h2 className="text-center mb-4">Student Success Stories</h2>
           <div id="successCarousel" className="carousel slide" data-bs-ride="carousel">
@@ -68,8 +70,8 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Modal Section */}
-      <section className="modal-section text-center py-5">
+      
+      {/* <section className="modal-section text-center py-5">
         <button className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#subscribeModal">
           Subscribe for Updates
         </button>
@@ -92,15 +94,18 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Footer */}
-      <footer className="bg-dark text-white text-center py-4">
+      {/* <footer className="bg-dark text-white text-center py-4">
         <p>&copy; 2024 CyberSecurity Academy. All Rights Reserved.</p>
         <p>
           <a href="/privacy" className="text-white">Privacy Policy</a> | <a href="/terms" className="text-white">Terms of Service</a>
         </p>
-      </footer>
+      </footer> */}
+      <Footer />
+
+      <CallButton/>
     </div>
   );
 };
