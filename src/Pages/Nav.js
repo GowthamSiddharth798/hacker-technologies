@@ -10,11 +10,18 @@ const Nav = () => {
 
   const toggleNavbar = () => setIsNavOpen(!isNavOpen);
 
+  // Close the navbar when a link is clicked (for mobile view)
+  const handleLinkClick = () => {
+    if (window.innerWidth <= 768) {
+      setIsNavOpen(false); // Close the navbar in mobile view
+    }
+  };
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
       <div className="container">
         {/* Logo and heading */}
-        <Link className="navbar-brand d-flex align-items-center" to="/">
+        <Link className="navbar-brand d-flex align-items-center" to="/" onClick={handleLinkClick}>
           <img src={Logo} alt="Hacker Technologies Logo" className="logo me-2" />
           <span className="brand-name">Hacker Plus Technologies</span>
         </Link>
@@ -35,16 +42,16 @@ const Nav = () => {
         <div className={`collapse navbar-collapse ${isNavOpen ? 'show' : ''}`} id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <Link className="nav-link hover-underline" to="/">Home</Link>
+              <Link className="nav-link hover-underline" to="/" onClick={handleLinkClick}>Home</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link hover-underline" to="/about">About Us</Link>
+              <Link className="nav-link hover-underline" to="/about" onClick={handleLinkClick}>About Us</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link hover-underline" to="/course">Courses</Link>
+              <Link className="nav-link hover-underline" to="/course" onClick={handleLinkClick}>Courses</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link hover-underline" to="/contact">Contact</Link>
+              <Link className="nav-link hover-underline" to="/contact" onClick={handleLinkClick}>Contact</Link>
             </li>
           </ul>
         </div>

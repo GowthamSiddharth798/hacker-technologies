@@ -2,10 +2,10 @@
 .navbar {
   background-color: #1b263b; /* Deep blue color */
   transition: background-color 0.3s ease;
-}
-
-.navbar:hover {
-  background-color: #152033; /* Slightly darker on hover */
+  display: flex;
+  justify-content: space-between; /* Ensure the logo and button are at opposite ends */
+  align-items: center; /* Vertically center the items */
+  padding: 0.5rem 1rem;
 }
 
 .navbar .logo {
@@ -19,6 +19,18 @@
   font-size: 1.5rem;
   font-weight: bold;
   color: #1dd9f6;
+  margin-left: 10px; /* Slight space between the logo and the brand name */
+}
+
+/* Adjust navbar toggler button to align with the heading */
+.navbar-toggler {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.navbar-nav {
+  margin-left: auto; /* Pushes the nav items to the right */
 }
 
 .navbar-nav .nav-link {
@@ -28,26 +40,13 @@
   transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
-/* Hover underline effect */
-.navbar-nav .nav-link.hover-underline::after {
-  content: '';
-  display: block;
-  width: 0;
-  height: 2px;
-  background: #1cc7e1;
-  transition: width 0.3s;
-}
-
-.navbar-nav .nav-link.hover-underline:hover::after {
-  width: 100%;
-}
-
-.navbar-nav .nav-link:hover {
-  color: #1bc0d9;
-}
-
-/* Responsive Adjustments */
+/* Mobile view */
 @media (max-width: 768px) {
+  .navbar {
+    flex-direction: row; /* Align everything in a single row */
+    justify-content: space-between; /* Ensure there's space between logo and hamburger */
+  }
+
   .navbar .logo {
     height: 40px;
   }
@@ -58,6 +57,10 @@
 
   .navbar-nav .nav-link {
     font-size: 0.95rem;
+  }
+
+  .navbar-toggler {
+    order: 2; /* Ensures the hamburger button stays in line with the brand */
   }
 }
 
@@ -72,5 +75,33 @@
 
   .navbar-nav .nav-link {
     font-size: 0.9rem;
+  }
+}
+@media (max-width: 320px) {
+  .navbar {
+    flex-direction: column; /* Stack items vertically to prevent cramping */
+    align-items: flex-start; /* Align logo and button to the left */
+    padding: 0.5rem;
+  }
+
+  .navbar .logo {
+    height: 30px; /* Further reduce logo size */
+  }
+
+  .navbar .brand-name {
+    font-size: 0.7rem; /* Smaller font size for very small screens */
+    margin-left: 0; /* Remove left margin */
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 0.8rem; /* Adjust nav links to fit smaller screens */
+  }
+
+  .navbar-toggler {
+    order: 1; /* Ensure the hamburger stays at the top */
+  }
+
+  .navbar-nav {
+    margin-top: 0.5rem; /* Slightly separate the menu items */
   }
 }

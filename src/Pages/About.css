@@ -2,7 +2,8 @@
 .about-us {
   animation: fadeIn 1.5s ease-in-out;
 }
-/* Style only h3 with about-heading class */
+
+/* Heading Styling */
 .about-us .about-heading {
   color: #ffffff;
   font-size: 1.75rem;
@@ -21,12 +22,14 @@
   animation: fadeInDown 1s ease;
 }
 
+/* Company Info */
 .company-info p {
   font-size: 1rem;
   line-height: 1.6;
   color: #d1d1d1;
 }
 
+/* About Image */
 .about-image img {
   transition: transform 0.3s ease-in-out;
 }
@@ -38,12 +41,23 @@
 /* Staff Section */
 .staff-card {
   background-color: #1b263b;
-  transition: transform 0.3s ease;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
+  padding: 15px;
 }
 
 .staff-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.staff-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #17a2b8;
 }
 
 .staff-name {
@@ -55,6 +69,7 @@
 .staff-title {
   font-size: 1rem;
   color: #b0b0b0;
+  margin-bottom: 5px;
 }
 
 .staff-desc {
@@ -88,5 +103,20 @@
 @media (max-width: 768px) {
   .staff-card {
     margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-image img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
   }
 }

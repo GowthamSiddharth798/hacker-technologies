@@ -21,7 +21,7 @@ const Footer = () => {
         <div className="contact-info my-3">
           <p>
             <FontAwesomeIcon icon={faMapMarkerAlt} className="me-2" />
-            123 Cyber Street, Silicon Valley, CA
+            Hyderabad, Telangana, India
           </p>
           <p>
             <FontAwesomeIcon icon={faPhoneAlt} className="me-2" />
