@@ -1,13 +1,13 @@
 import React from "react";
 import "./OffensiveSecurity.css";
-import Footer from '../Footer';
+import Footer from "../Footer";
 
 const OffensiveSecurity = () => {
   const courses = [
     {
       title: "Ethical Hacker Essential",
       description: "Learn the fundamentals of ethical hacking.",
-      icon: "fa-shield-alt", // FontAwesome icon class
+      icon: "fa-shield-alt",
     },
     {
       title: "Advanced Ethical Hacking and Web Pentesting",
@@ -41,6 +41,15 @@ const OffensiveSecurity = () => {
     },
   ];
 
+  const handleEnroll = (courseTitle) => {
+    const phone = "9390073970"; // Replace with your WhatsApp number
+    const message = `Hello, I am interested in the "${courseTitle}" course. Please provide more details.`;
+    const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(
+      message
+    )}`;
+    window.open(whatsappUrl, "_blank");
+  };
+
   return (
     <div className="offensive-security">
       <div className="parallax-bg">
@@ -56,6 +65,15 @@ const OffensiveSecurity = () => {
                   <div className="card-body">
                     <h5 className="card-title">{course.title}</h5>
                     <p className="card-text">{course.description}</p>
+                    {/* Enroll Button */}
+                    <div className="text-center mt-3">
+                      <button
+                        className="btn btn-primary enroll-button"
+                        onClick={() => handleEnroll(course.title)}
+                      >
+                        Enroll Now
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -63,8 +81,7 @@ const OffensiveSecurity = () => {
           </div>
         </div>
       </div>
-      <Footer/>
-
+      <Footer />
     </div>
   );
 };

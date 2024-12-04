@@ -57,3 +57,17 @@
     font-size: 1.1rem;
   }
 }
+.enroll-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  background: linear-gradient(to right, #007bff, #0056b3);
+  color: white;
+  transition: background 0.3s ease;
+}
+
+.enroll-button:hover {
+  background: linear-gradient(to right, #0056b3, #003c7a);
+  color: #f8f9fa;
+}
+
