@@ -42,7 +42,7 @@ const OffensiveSecurity = () => {
   ];
 
   const handleEnroll = (courseTitle) => {
-    const phone = "9390073970"; // Replace with your WhatsApp number
+    const phone = "8309729774"; // Replace with your WhatsApp number
     const message = `Hello, I am interested in the "${courseTitle}" course. Please provide more details.`;
     const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(
       message

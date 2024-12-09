@@ -1,0 +1,60 @@
+.splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000; /* Background color of the splash screen */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  transition: opacity 1s ease-in-out; /* Smooth fade-out */
+  opacity: 1; /* Fully visible */
+}
+
+.splash-screen.fade-out {
+  opacity: 0; /* Fades out */
+  pointer-events: none; /* Avoid interaction during fade-out */
+}
+
+.zoom-container {
+  animation: zoomIn 3s ease-in-out forwards; /* Zoom-in effect */
+}
+
+.splash-logo {
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 50%;
+}
+
+.splash-text {
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out 1s forwards; /* Text fade-in effect */
+}
+
+/* Zoom In Animation */
+@keyframes zoomIn {
+  from {
+    transform: scale(0.5); /* Starts small */
+    opacity: 0; /* Transparent at the start */
+  }
+  to {
+    transform: scale(1); /* Full size */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
