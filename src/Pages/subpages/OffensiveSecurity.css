@@ -71,3 +71,35 @@
   color: #f8f9fa;
 }
 
+/* Price Styling */
+.card-price {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+.discounted-price {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #ff0000; /* Red color for discounted price */
+  animation: blink 1s infinite; /* Apply blinking animation */
+}
+
+.original-price {
+  font-size: 1rem;
+  text-decoration: line-through;
+  color: #dc3545; /* Red color for original price */
+  margin-left: 1rem;
+}
+
+/* Blinking effect for the discounted price */
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}

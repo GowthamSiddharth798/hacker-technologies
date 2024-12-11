@@ -3,18 +3,70 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./Home.css";
 import Footer from './Footer';
 import CallButton from "./CallButton";
+import main2 from '../Images/main2.jpg'
+import main3 from '../Images/main3.jpg'
+import main from '../Images/main.jpg'
 
 const Home = () => {
   return (
     <div>
-           <header className="hero text-white text-center d-flex align-items-center justify-content-center">
-        <div className="container">
-          <h1 className="display-4 animate-fade">Welcome to CyberSecurity Academy</h1>
-          <p className="lead animate-slide">
-            Build a career in cybersecurity with our cutting-edge courses!
-          </p>
-        </div>
-      </header>
+          <header className="carousel slide hero" id="heroCarousel" data-bs-ride="carousel">
+              <div className="carousel-inner">
+                      <div className="carousel-item active">
+                        <img
+                          src={main}
+                          className="d-block w-100"
+                          alt="Cybersecurity"
+                        />
+                        <div className="carousel-caption">
+                          <h1 className="display-4 animate-fade">Welcome to CyberSecurity Academy</h1>
+                          <p className="lead animate-slide">Build a career in cybersecurity with our cutting-edge courses!</p>
+                        </div>
+                      </div>
+                      <div className="carousel-item">
+                        <img
+                          src={main3}
+                          className="d-block w-100"
+                          alt="Technology"
+                        />
+                        <div className="carousel-caption">
+                          <h1 className="display-4 animate-fade">Secure the Digital World</h1>
+                          <p className="lead animate-slide">Join hands with experts to master cybersecurity.</p>
+                        </div>
+                      </div>
+                      <div className="carousel-item">
+                        <img
+                          src={main2}
+                          className="d-block w-100"
+                          alt="Coding"
+                        />
+                        <div className="carousel-caption">
+                          <h1 className="display-4 animate-fade">Transform Your Career</h1>
+                          <p className="lead animate-slide">Learn from professionals and stay ahead of threats.</p>
+                        </div>
+                      </div>
+              </div>
+
+  <button
+    className="carousel-control-prev"
+    type="button"
+    data-bs-target="#heroCarousel"
+    data-bs-slide="prev"
+  >
+    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span className="visually-hidden">Previous</span>
+  </button>
+  <button
+    className="carousel-control-next"
+    type="button"
+    data-bs-target="#heroCarousel"
+    data-bs-slide="next"
+  >
+    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+    <span className="visually-hidden">Next</span>
+  </button>
+</header>
+
 
       <section className="features py-5 bg-light">
         <div className="container">

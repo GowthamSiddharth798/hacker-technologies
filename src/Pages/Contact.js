@@ -17,9 +17,8 @@ const Contact = () => {
               <p>
                 Address:  Hyderabad, Telangana, India
               </p>
-              <p>Email: support@hackertechnologies.com</p>
+              <p>Email: hackerplustechnologies@gmail.com</p>
               <p>Phone: +91-8309729774</p>
-              <p>Website: www.hackertechnologies.com</p>
             </div>
 
             {/* Google Form */}

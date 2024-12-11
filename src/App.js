@@ -13,7 +13,7 @@ const App = () => {
       <div>
       {showSplash ? <SplashScreen onAnimationEnd={handleAnimationEnd} /> : <Navigate />}
     </div>
-   <Navigate/>
+   {/* <Navigate/> */}
     </>
     
   );

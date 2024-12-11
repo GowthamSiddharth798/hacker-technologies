@@ -8,10 +8,11 @@ body {
   padding: 0;
 }
 
-h1,h2,   h4, h5 {
+h1, h2, h4, h5 {
   color: #ffffff;
 }
-h3{
+
+h3 {
   color: black;
 }
 
@@ -43,25 +44,39 @@ p {
 
 /* Hero Section */
 .hero {
+  position: relative;
+  width: 100%;
+  height: 56.5vh;
   background: linear-gradient(rgba(27, 38, 59, 0.8), rgba(27, 38, 59, 0.8)),
-    url("https://source.unsplash.com/1920x1080/?cybersecurity") no-repeat center center/cover;
-  height: 100vh;
+    url("https://d3lu3qnchgm3nw.cloudfront.net/AcuCustom/Sitename/DAM/028/iStock-1420039900.jpg") no-repeat center center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
-  text-align: center;
-  padding: 0 1rem;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vh;
+  height: 100vh;
+  background: inherit;
+  transform: translate(-50%, -50%) rotate(45deg);
+  z-index: -1;
 }
 
 .hero h1 {
-  font-size: 6vw; /* Adjust font size based on viewport width */
+  font-size: 2vw;
+  color: white;
   animation: fadeIn 2s ease-in-out;
 }
 
 .hero p {
   font-size: 3vw;
   margin-top: 1rem;
+  color: white;
   animation: slideIn 2s ease-in-out;
 }
 
@@ -80,6 +95,37 @@ p {
   background-color: #138496;
 }
 
+/* Carousel */
+.carousel-item img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  padding: 0 2rem; /* Add some padding for better readability */
+  max-width: 80%; /* Restrict the width of the text for readability */
+}
+
+.carousel-caption h1,
+.carousel-caption p {
+  color: white;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+}
+
 /* Features Section */
 .features {
   background: #1b263b;
@@ -91,13 +137,6 @@ p {
   font-size: 3rem;
   color: #17a2b8;
   margin-bottom: 1rem;
-}
-
-/* Carousel */
-.carousel-item img {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Footer */
@@ -135,67 +174,18 @@ footer p {
   }
 }
 
-/* Default styles for large screens (desktops) */
-.hero {
-  font-size: 2rem;
-}
-
-.hero .display-4 {
-  font-size: 3rem;
-}
-
-.hero .lead {
-  font-size: 1.25rem;
-}
-
-.features h2 {
-  font-size: 2.5rem;
-}
-
-.features .col-md-4 h3 {
-  font-size: 1.5rem;
-}
-
-.carousel-section h2 {
-  font-size: 2.5rem;
-}
-
-.modal-section h5 {
-  font-size: 1.75rem;
-}
-
-footer p {
-  font-size: 1rem;
-}
-
-/* Medium screens (tablets) */
+/* Responsive Design */
 @media (max-width: 768px) {
-  .hero {
-    font-size: 1.5rem;
+  .hero h1 {
+    font-size: 5vw; /* Slightly smaller font for tablets */
   }
 
-  .hero .display-4 {
-    font-size: 2.5rem;
-  }
-
-  .hero .lead {
-    font-size: 1rem;
+  .hero p {
+    font-size: 2.5vw; /* Adjust paragraph font for better readability */
   }
 
   .features h2 {
-    font-size: 2rem;
-  }
-
-  .features .col-md-4 h3 {
-    font-size: 1.25rem;
-  }
-
-  .carousel-section h2 {
-    font-size: 2rem;
-  }
-
-  .modal-section h5 {
-    font-size: 1.5rem;
+    font-size: 2rem; /* Adjust font size for headings in the features section */
   }
 
   footer p {
@@ -203,34 +193,17 @@ footer p {
   }
 }
 
-/* Small screens (phones) */
 @media (max-width: 576px) {
-  .hero {
-    font-size: 1.25rem;
+  .hero h1 {
+    font-size: 6vw; /* Further reduce font size for smaller screens */
   }
 
-  .hero .display-4 {
-    font-size: 2rem;
-  }
-
-  .hero .lead {
-    font-size: 0.875rem;
+  .hero p {
+    font-size: 4vw; /* Adjust paragraph font to fit on smaller screens */
   }
 
   .features h2 {
-    font-size: 1.75rem;
-  }
-
-  .features .col-md-4 h3 {
-    font-size: 1.1rem;
-  }
-
-  .carousel-section h2 {
-    font-size: 1.75rem;
-  }
-
-  .modal-section h5 {
-    font-size: 1.25rem;
+    font-size: 1.75rem; /* Adjust font size for smaller screens */
   }
 
   footer p {
@@ -238,66 +211,69 @@ footer p {
   }
 }
 
-
-
-
-
-/* Hero Section */
-.hero {
-  position: relative;
-  width: 100%;
-  /* margin-top: 20px; */
-  height: 56.5vh;
-  background-image: url("https://d3lu3qnchgm3nw.cloudfront.net/AcuCustom/Sitename/DAM/028/iStock-1420039900.jpg");
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  /* border-top-right-radius: 50%; Apply rounded corner to create the shape */
-}
-
-.hero::before {
-  content: "";
+/* Hero Section Adjustments for Carousel */
+.hero .carousel-caption {
   position: absolute;
-  top: 50%;
+  bottom: 20%;
   left: 50%;
-  width: 100vh; /* Make the width and height equal to create a square */
-  height: 100vh;
-  background: inherit;
-  transform: translate(-50%, -50%) rotate(45deg); /* Rotate by 45 degrees to create a rhombus */
-  z-index: -1; /* Ensure the background image stays behind text */
+  transform: translateX(-50%);
+  text-align: center;
+  padding: 0 2rem; /* Added padding for better spacing */
+  max-width: 80%; /* Limit text width */
 }
 
-/* Text and Button Styles */
-.hero h1 {
-  font-size: 6vw; /* Adjust font size based on viewport width */
-  color: white;
-  animation: fadeIn 2s ease-in-out;
-}
-
-.hero p {
+.hero .display-4 {
   font-size: 3vw;
-  margin-top: 1rem;
+  /* font-weight: bold; */
   color: white;
-  animation: slideIn 2s ease-in-out;
+  margin-bottom: 0.5rem;
 }
 
-.hero a {
-  margin-top: 2rem;
-  padding: 10px 25px;
-  font-size: 1.2rem;
-  border-radius: 50px;
-  text-transform: uppercase;
-  color: #ffffff;
-  background-color: #17a2b8;
-  transition: background-color 0.3s ease;
+.hero .lead {
+  font-size: 2vw;
+  color: white;
+  margin-top: 1rem;
+  opacity: 0.8;
 }
 
-.hero a:hover {
-  background-color: #138496;
+/* Carousel Image */
+.carousel-item img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
 }
 
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1); /* Makes the arrows visible on dark backgrounds */
+}
 
+/* Additional Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero .display-4 {
+    font-size: 5vw;
+  }
 
+  .hero .lead {
+    font-size: 3vw;
+  }
+
+  .hero .carousel-caption {
+    bottom: 15%;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero .display-4 {
+    font-size: 6vw;
+  }
+
+  .hero .lead {
+    font-size: 4vw;
+  }
+
+  .hero .carousel-caption {
+    bottom: 10%;
+  }
+}

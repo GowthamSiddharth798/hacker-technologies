@@ -8,36 +8,44 @@ const OffensiveSecurity = () => {
       title: "Ethical Hacker Essential",
       description: "Learn the fundamentals of ethical hacking.",
       icon: "fa-shield-alt",
+      price: "₹1499",
+      originalPrice: "₹2000",  // Original price
     },
     {
       title: "Advanced Ethical Hacking and Web Pentesting",
       description: "Dive deeper into ethical hacking and penetration testing.",
       icon: "fa-code",
+      price: "₹7999",
+      originalPrice: "₹12000",  // Original price
     },
     {
       title: "Web Application Penetration Testing",
       description: "Master techniques to secure web applications.",
       icon: "fa-globe",
+      price: "₹15999",
+      originalPrice: "₹20000",  // Original price
     },
-    {
-      title: "Mobile Application Penetration Testing",
-      description: "Specialize in securing mobile applications.",
-      icon: "fa-mobile-alt",
-    },
+    
     {
       title: "API Penetration Testing",
       description: "Understand and secure APIs from vulnerabilities.",
       icon: "fa-plug",
+      price: "₹15999",
+      originalPrice: "₹20000",  // Original price
     },
     {
       title: "Network Penetration Testing",
       description: "Protect networks with advanced penetration testing skills.",
       icon: "fa-network-wired",
+      price: "₹15999",
+      originalPrice: "₹20000",  // Original price
     },
     {
       title: "OT-IOT Pentester",
       description: "Secure operational technology and IoT devices.",
       icon: "fa-satellite-dish",
+      price: "₹15999",
+      originalPrice: "₹20000",  // Original price
     },
   ];
 
@@ -65,6 +73,10 @@ const OffensiveSecurity = () => {
                   <div className="card-body">
                     <h5 className="card-title">{course.title}</h5>
                     <p className="card-text">{course.description}</p>
+                    <div className="card-price">
+                      <span className="discounted-price">{course.price} only</span>
+                      <span className="original-price">{course.originalPrice}</span>
+                    </div>
                     {/* Enroll Button */}
                     <div className="text-center mt-3">
                       <button

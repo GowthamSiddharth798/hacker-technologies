@@ -1,14 +1,37 @@
 import React from "react";
 import "./DefensiveSecurity.css";
-import Footer from '../Footer';
+import Footer from "../Footer";
 
 const DefensiveSecurity = () => {
   const courses = [
-    { title: "Threat Hunter", description: "Identify and eliminate hidden cyber threats.", icon: "fa-search" },
-    { title: "SIEM and Log Analysis", description: "Analyze logs for detecting and mitigating risks.", icon: "fa-database" },
-    { title: "Incident Response and Forensic", description: "Master techniques to handle and investigate incidents.", icon: "fa-magnifying-glass" },
-    { title: "Security Operations Center Analyst", description: "Become an expert in SOC analysis and monitoring.", icon: "fa-cogs" },
-    { title: "Malware Analyst", description: "Analyze and counteract malware attacks effectively.", icon: "fa-bug" },
+    {
+      title: "Threat Hunter",
+      description: "Identify and eliminate hidden cyber threats.",
+      icon: "fa-search",
+      price: "₹14999",
+      originalPrice: "₹18000", // Original price
+    },
+    {
+      title: "Incident Response and Forensic",
+      description: "Master techniques to handle and investigate incidents.",
+      icon: "fa-magnifying-glass",
+      price: "₹11999",
+      originalPrice: "₹15000", // Original price
+    },
+    {
+      title: "Security Operations Center Analyst",
+      description: "Become an expert in SOC analysis and monitoring.",
+      icon: "fa-cogs",
+      price: "₹17999",
+      originalPrice: "₹20000", // Original price
+    },
+    {
+      title: "Malware Analyst",
+      description: "Analyze and counteract malware attacks effectively.",
+      icon: "fa-bug",
+      price: "₹13499",
+      originalPrice: "₹17000", // Original price
+    },
   ];
 
   const handleEnroll = (courseTitle) => {
@@ -33,6 +56,10 @@ const DefensiveSecurity = () => {
                   <div className="card-body">
                     <h5 className="card-title">{course.title}</h5>
                     <p className="card-text">{course.description}</p>
+                    <div className="card-price">
+                      <span className="discounted-price">{course.price} only</span>
+                      <span className="original-price">{course.originalPrice}</span>
+                    </div>
                     {/* Enroll Now Button */}
                     <div className="text-center mt-3">
                       <button

@@ -65,7 +65,7 @@ const courses = [
     path: "/penetration-testing",
   },
   {
-    title: "Advanced Bug Hunting",
+    title: "Live Bug Hunting",
     description:
       "Gain expertise in identifying and exploiting vulnerabilities in applications.",
     image: BugHunting,
