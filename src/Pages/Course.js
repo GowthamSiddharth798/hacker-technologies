@@ -11,10 +11,9 @@ import BugHunting from '../Images/BugHunting.jpg';
 import digitalforensics from '../Images/digitalforensics.webp';
 
 const Course = () => {
-  const navigate = useNavigate(); // React Router hook for navigation
-
+  const navigate = useNavigate();
   const handleCardClick = (path) => {
-    navigate(path); // Navigate to the specific page
+    navigate(path); 
   };
 
   return (
@@ -55,21 +54,20 @@ const Course = () => {
   );
 };
 
-// Course Data with Paths
 const courses = [
   {
     title: "Penetration Testing",
     description:
       "Specialize in penetration testing for APIs, mobile, web applications, networks, OT, and IoT.",
     image: PenetrationTestingImage,
-    path: "/penetration-testing",
+    path: "/offensive-security",
   },
   {
     title: "Live Bug Hunting",
     description:
       "Gain expertise in identifying and exploiting vulnerabilities in applications.",
     image: BugHunting,
-    path: "/advanced-bug-hunting",
+    path: "/course",
   },
   {
     title: "Defensive Security",
@@ -90,14 +88,14 @@ const courses = [
     description:
       "Learn the fundamentals of ethical hacking and its importance in today's digital landscape.",
     image: EthicalHacking,
-    path: "/ethical-hacking-essentials",
+    path: "/offensive-security",
   },
   {
-    title: "Digital Forensics Essentials",
+    title: "Digital Forensics ",
     description:
       "Learn the techniques for investigating and analyzing digital crimes.",
     image: digitalforensics,
-    path: "/digital-forensics-essentials",
+    path: "/defensive-security",
   },
 ];
 

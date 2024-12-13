@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./SplashScreen.css";
-import Logo from "../Images/Logo.jpg"; // Import the logo
+import Logo from "../Images/ms.jpg"; // Import the logo
 
 const SplashScreen = ({ onAnimationEnd }) => {
   const [fadeOut, setFadeOut] = useState(false);

@@ -27,7 +27,7 @@ const About = () => {
       certifications: [
         "CEH Master",
         "CPENT",
-        "Cromptya+ Cyber Crime Investigator",
+        "Comptia+ Cyber Crime Investigator",
         "IoT Tester",
       ],
       specialization:

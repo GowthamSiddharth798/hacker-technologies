@@ -12,10 +12,6 @@ h1, h2, h4, h5 {
   color: #ffffff;
 }
 
-h3 {
-  color: black;
-}
-
 p {
   color: #b0b0b0;
 }
@@ -55,28 +51,24 @@ p {
   overflow: hidden;
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100vh;
-  height: 100vh;
-  background: inherit;
-  transform: translate(-50%, -50%) rotate(45deg);
-  z-index: -1;
+.hero h1, .hero p {
+  color: white;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+  margin: 0;
+}
+
+.ee {
+  color: black !important;
 }
 
 .hero h1 {
   font-size: 2vw;
-  color: white;
   animation: fadeIn 2s ease-in-out;
 }
 
 .hero p {
   font-size: 3vw;
   margin-top: 1rem;
-  color: white;
   animation: slideIn 2s ease-in-out;
 }
 
@@ -101,8 +93,6 @@ p {
   height: 100vh;
   object-fit: cover;
   object-position: center;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .carousel-caption {
@@ -111,32 +101,8 @@ p {
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
-  padding: 0 2rem; /* Add some padding for better readability */
-  max-width: 80%; /* Restrict the width of the text for readability */
-}
-
-.carousel-caption h1,
-.carousel-caption p {
-  color: white;
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  filter: invert(1);
-}
-
-/* Features Section */
-.features {
-  background: #1b263b;
-  padding: 3rem 0;
-  color: #d1d1d1;
-}
-
-.feature-icon {
-  font-size: 3rem;
-  color: #17a2b8;
-  margin-bottom: 1rem;
+  padding: 0 2rem;
+  max-width: 80%;
 }
 
 /* Footer */
@@ -155,125 +121,28 @@ footer p {
 
 /* Animations */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @keyframes slideIn {
-  from {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 5vw; /* Slightly smaller font for tablets */
-  }
-
-  .hero p {
-    font-size: 2.5vw; /* Adjust paragraph font for better readability */
-  }
-
-  .features h2 {
-    font-size: 2rem; /* Adjust font size for headings in the features section */
-  }
-
-  footer p {
-    font-size: 0.9rem;
-  }
+  .hero h1 { font-size: 5vw; }
+  .hero p { font-size: 2.5vw; }
+  .hero .display-4 { font-size: 5vw; }
+  .hero .lead { font-size: 3vw; }
+  .hero .carousel-caption { bottom: 15%; }
 }
 
 @media (max-width: 576px) {
-  .hero h1 {
-    font-size: 6vw; /* Further reduce font size for smaller screens */
-  }
-
-  .hero p {
-    font-size: 4vw; /* Adjust paragraph font to fit on smaller screens */
-  }
-
-  .features h2 {
-    font-size: 1.75rem; /* Adjust font size for smaller screens */
-  }
-
-  footer p {
-    font-size: 0.85rem;
-  }
-}
-
-/* Hero Section Adjustments for Carousel */
-.hero .carousel-caption {
-  position: absolute;
-  bottom: 20%;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  padding: 0 2rem; /* Added padding for better spacing */
-  max-width: 80%; /* Limit text width */
-}
-
-.hero .display-4 {
-  font-size: 3vw;
-  /* font-weight: bold; */
-  color: white;
-  margin-bottom: 0.5rem;
-}
-
-.hero .lead {
-  font-size: 2vw;
-  color: white;
-  margin-top: 1rem;
-  opacity: 0.8;
-}
-
-/* Carousel Image */
-.carousel-item img {
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-  object-position: center;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  filter: invert(1); /* Makes the arrows visible on dark backgrounds */
-}
-
-/* Additional Responsive Adjustments */
-@media (max-width: 768px) {
-  .hero .display-4 {
-    font-size: 5vw;
-  }
-
-  .hero .lead {
-    font-size: 3vw;
-  }
-
-  .hero .carousel-caption {
-    bottom: 15%;
-  }
-}
-
-@media (max-width: 576px) {
-  .hero .display-4 {
-    font-size: 6vw;
-  }
-
-  .hero .lead {
-    font-size: 4vw;
-  }
-
-  .hero .carousel-caption {
-    bottom: 10%;
-  }
+  .hero h1 { font-size: 6vw; }
+  .hero p { font-size: 4vw; }
+  .hero .display-4 { font-size: 6vw; }
+  .hero .lead { font-size: 4vw; }
+  .hero .carousel-caption { bottom: 10%; }
 }
