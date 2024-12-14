@@ -3,11 +3,11 @@ import { useNavigate } from "react-router-dom";
 import "./Course.css";
 import Footer from './Footer';
 import CallButton from "./CallButton";
-import PenetrationTestingImage from '../Images/PenetrationTesting.jpg';
+// import PenetrationTestingImage from '../Images/PenetrationTesting.jpg';
 import defensive from '../Images/defensive.png';
-import EthicalHacking from '../Images/EthicalHacking.jpg';
+// import EthicalHacking from '../Images/EthicalHacking.jpg';
 import Offensive from '../Images/Offensive.jpg';
-import BugHunting from '../Images/BugHunting.jpg';
+// import BugHunting from '../Images/BugHunting.jpg';
 import digitalforensics from '../Images/digitalforensics.webp';
 
 const Course = () => {
