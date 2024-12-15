@@ -1,5 +1,6 @@
 import React from "react";
 import "./Contact.css"; // Optional: Add styles for the contact page
+import CallButton from "./CallButton";
 
 const Contact = () => {
   return (
@@ -41,6 +42,7 @@ const Contact = () => {
           </div>
         </div>
       </section>
+      <CallButton/>
     </div>
   );
 };

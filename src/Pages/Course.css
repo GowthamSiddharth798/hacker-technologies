@@ -44,4 +44,13 @@
   .card:hover .card-img-top {
     transform: scale(1.1);
   }
+  .row1 {
+    display: flex;
+    justify-content: center; /* Centers the cards horizontally */
+    gap: 1rem; /* Adds space between the cards */
+  }
+  
+  .card1{
+    flex: 0 0 auto; /* Ensures the cards don't stretch */
+  }
   

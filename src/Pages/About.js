@@ -56,14 +56,14 @@ const About = () => {
       <section className="about-us bg-dark text-light py-5">
         <div className="container">
           <div className="text-center mb-5">
-            <h2 className="section-title">About Us</h2>
-            <p className="section-subtitle">
+            <h2 className="section-title fade-in">About Us</h2>
+            <p className="section-subtitle fade-in">
               Excellence in Education, Driven by Passionate Expertise
             </p>
           </div>
 
           <div className="row align-items-center mb-5">
-            <div className="col-md-6">
+            <div className="col-md-6 slide-in-left">
               <div className="company-info">
                 <h3 className="about-heading text-white">Who We Are</h3>
                 <p className="lead">
@@ -72,9 +72,14 @@ const About = () => {
                   team is dedicated to empowering learners with practical
                   knowledge and skills to excel in their careers.
                 </p>
+                <p className="lead">
+                  We offer our courses in multiple languages: Kannada, Telugu,
+                  Hindi, and English, ensuring accessibility for learners from
+                  diverse backgrounds.
+                </p>
               </div>
             </div>
-            <div className="col-md-6">
+            <div className="col-md-6 slide-in-right">
               <div className="about-image">
                 <img
                   src="https://www.springboard.com/blog/wp-content/uploads/2021/06/shutterstock_505066678-scaled.jpg"
@@ -86,13 +91,13 @@ const About = () => {
           </div>
 
           <div className="row">
-            <h3 className="about-heading text-white text-center mb-4">
+            <h3 className="about-heading text-white text-center mb-4 fade-in">
               Our Experienced Instructors
             </h3>
             {instructors.map((staff, index) => (
               <div
                 key={index}
-                className="col-md-4 d-flex justify-content-center mb-4"
+                className="col-md-4 d-flex justify-content-center mb-4 fade-in"
               >
                 <div className="staff-card text-center bg-secondary rounded shadow p-3">
                   <img

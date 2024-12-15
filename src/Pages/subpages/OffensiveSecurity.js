@@ -38,6 +38,20 @@ const OffensiveSecurity = () => {
     },
   ];
 
+  // Function to handle enroll button click and redirect to WhatsApp
+  const handleEnroll = (courseTitle) => {
+    const phone = "+918309729774"; // Replace with your WhatsApp number (without '+' symbol)
+    const message = `Hello, I am interested in the \"${courseTitle}\" course. Please provide more details.`;
+    const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+
+    // Open WhatsApp URL in a new tab or window
+    if (window.innerWidth >= 768) {
+      window.open(whatsappUrl, "_blank"); // Ensures it works for larger screen sizes (laptops)
+    } else {
+      window.location.href = whatsappUrl; // Fallback for smaller devices
+    }
+  };
+
   return (
     <div className="offensive-security">
       <div className="parallax-bg">
@@ -65,7 +79,10 @@ const OffensiveSecurity = () => {
                       <span className="original-price">{course.originalPrice}</span>
                     </div>
                     <div className="text-center mt-3">
-                      <button className="btn btn-primary enroll-button">
+                      <button
+                        className="btn btn-primary enroll-button"
+                        onClick={() => handleEnroll(course.title)}
+                      >
                         Enroll Now
                       </button>
                     </div>
@@ -78,7 +95,6 @@ const OffensiveSecurity = () => {
       </div>
       <Footer />
       <CallButton />
-
     </div>
   );
 };

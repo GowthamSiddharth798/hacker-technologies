@@ -18,20 +18,20 @@ const Course = () => {
 
   return (
     <>
-      <div className="about-page">
-        <section className="about-content py-5">
-          <div className="container">
+      <div className="about-page center row1">
+        <section className="about-content py-5 ">
+          <div className="container ">
             <h2 className="text-center mb-4">
               Introducing Our Cybersecurity Courses
             </h2>
-            <div className="row g-4">
+            <div className="row row1 g-4">
               {courses.map((course, index) => (
                 <div
                   key={index}
                   className="col-md-6 col-lg-4"
                   onClick={() => handleCardClick(course.path)}
                 >
-                  <div className="card h-100 course-box shadow">
+                  <div className="card  h-100 course-box shadow">
                     <img
                       src={course.image}
                       alt={course.title}
@@ -90,13 +90,13 @@ const courses = [
   //   image: EthicalHacking,
   //   path: "/offensive-security",
   // },
-  {
-    title: "Digital Forensics ",
-    description:
-      "Learn the techniques for investigating and analyzing digital crimes.",
-    image: digitalforensics,
-    path: "/defensive-security",
-  },
+  // {
+  //   title: "Digital Forensics ",
+  //   description:
+  //     "Learn the techniques for investigating and analyzing digital crimes.",
+  //   image: digitalforensics,
+  //   path: "/defensive-security",
+  // },
 ];
 
 export default Course;
