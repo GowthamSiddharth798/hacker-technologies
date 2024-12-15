@@ -38,6 +38,13 @@ const OffensiveSecurity = () => {
     },
   ];
 
+  const handleEnroll = (courseTitle) => {
+    const phone = "+918309729774"; // Replace with your WhatsApp number
+    const message = `Hello, I am interested in the "${courseTitle}" course. Please provide more details.`;
+    const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, "_blank");
+  };
+
   return (
     <div className="offensive-security">
       <div className="parallax-bg">
@@ -65,7 +72,10 @@ const OffensiveSecurity = () => {
                       <span className="original-price">{course.originalPrice}</span>
                     </div>
                     <div className="text-center mt-3">
-                      <button className="btn btn-primary enroll-button">
+                      <button
+                        className="btn btn-primary enroll-button"
+                        onClick={() => handleEnroll(course.title)}
+                      >
                         Enroll Now
                       </button>
                     </div>
@@ -78,7 +88,6 @@ const OffensiveSecurity = () => {
       </div>
       <Footer />
       <CallButton />
-
     </div>
   );
 };

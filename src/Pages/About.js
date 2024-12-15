@@ -73,10 +73,18 @@ const About = () => {
                   knowledge and skills to excel in their careers.
                 </p>
                 <p className="lead">
-                  We offer our courses in multiple languages: Kannada, Telugu,
-                  Hindi, and English, ensuring accessibility for learners from
-                  diverse backgrounds.
-                </p>
+                <div class="course-language-support">
+  <h3>Course Language and Doubt Clarification Support</h3>
+  <p>We offer our courses in <strong>English</strong>, with additional <strong>doubt clarification support</strong> available in the following languages:</p>
+  <ul>
+    <li>Telugu</li>
+    <li>Tamil</li>
+    <li>Kannada</li>
+    <li>Hindi</li>
+    <li>English</li>
+  </ul>
+  <p>This ensures that our courses are accessible to learners from diverse backgrounds and provides the flexibility to clarify doubts in the language most comfortable for you.</p>
+</div></p>
               </div>
             </div>
             <div className="col-md-6 slide-in-right">
