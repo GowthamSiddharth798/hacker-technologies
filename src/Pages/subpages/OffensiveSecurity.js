@@ -41,7 +41,7 @@ const OffensiveSecurity = () => {
   // Function to handle enroll button click and redirect to WhatsApp
   const handleEnroll = (courseTitle) => {
     const phone = "+918309729774"; // Replace with your WhatsApp number (without '+' symbol)
-    const message = `Hello, I am interested in the \"${courseTitle}\" course. Please provide more details.`;
+    const message = `Hello, I am interested in the "${courseTitle}" course. Please provide more details.`; // Fixed unnecessary escape character
     const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 
     // Open WhatsApp URL in a new tab or window
