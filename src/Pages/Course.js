@@ -8,7 +8,7 @@ import defensive from '../Images/defensive.png';
 // import EthicalHacking from '../Images/EthicalHacking.jpg';
 import Offensive from '../Images/Offensive.jpg';
 // import BugHunting from '../Images/BugHunting.jpg';
-import digitalforensics from '../Images/digitalforensics.webp';
+// import digitalforensics from '../Images/digitalforensics.webp';
 
 const Course = () => {
   const navigate = useNavigate();
