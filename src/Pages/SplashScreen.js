@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./SplashScreen.css";
-import Logo from "../Images/ms.jpg"; // Import the logo
+import Logo from "../Images/Lo3.png"; // Import the logo
 
 const SplashScreen = ({ onAnimationEnd }) => {
   const [fadeOut, setFadeOut] = useState(false);
@@ -25,7 +25,7 @@ const SplashScreen = ({ onAnimationEnd }) => {
       <div className="zoom-container">
         <img src={Logo} alt="Logo" className="splash-logo" />
       </div>
-      <h1 className="splash-text">Welcome to Hacker Plus Technologies</h1>
+      {/* <h1 className="splash-text">Welcome to Hacker Plus Technologies</h1> */}
     </div>
   );
 };

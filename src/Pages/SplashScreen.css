@@ -24,7 +24,7 @@
 }
 
 .splash-logo {
-  width: 200px;
+  width: 300px; /* Increased size of the logo */
   height: auto;
   margin-bottom: 20px;
   border-radius: 50%;
